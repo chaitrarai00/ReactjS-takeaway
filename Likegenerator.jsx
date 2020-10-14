@@ -6,10 +6,10 @@ class LikeCounter extends React.Component{
   }
   
   LikeCounterHandler = () => {
-    this.setState({counter: this.state.counter+1 });// updates the state value and calls render again
-    console.log("Button Clicked"+counter)
+    this.setState({counter: this.state.counter+1 }); // updates the state value and calls render again
   }
   render(){
+    console.log('render is called at state/ with the state '+this.state.counter);
     return(
       <div>
       <button onClick={this.LikeCounterHandler}>❤️</button>
@@ -23,5 +23,3 @@ ReactDOM.render(
   <LikeCounter />,
   document.getElementById('root')
 );
-
-//understanding states by counting likes
